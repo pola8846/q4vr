@@ -11,7 +11,6 @@ public class LayserPointer : MonoBehaviour
     private ChessLayserCheck layserCheck;
 
     public float raycastDistance = 100f; // 레이저 포인터 감지 거리
-    public Material material1;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +19,7 @@ public class LayserPointer : MonoBehaviour
         layser = this.gameObject.AddComponent<LineRenderer>();
 
         // 라인이 가지개될 색상 표현
-        layser.material = material1;
+        layser.material = GameManager.Material_lay;
         // 레이저의 꼭지점은 2개가 필요 더 많이 넣으면 곡선도 표현 할 수 있다.
         layser.positionCount = 2;
         // 레이저 굵기 표현
@@ -48,7 +47,7 @@ public class LayserPointer : MonoBehaviour
                 {
                     currentObject = Collided_object.collider.gameObject;
                     layserCheck = currentObject.GetComponent<ChessLayserCheck>();
-                    layserCheck.Point();
+                    layserCheck?.Point();
                 }
             }
 
@@ -68,7 +67,7 @@ public class LayserPointer : MonoBehaviour
             if (currentObject != null)
             {
                 //currentObject.GetComponent<Button>()?.OnPointerExit(null);
-                layserCheck.UnPoint();
+                layserCheck?.UnPoint();
                 layserCheck = null;
                 currentObject = null;
             }

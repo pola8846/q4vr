@@ -5,14 +5,15 @@ using UnityEngine;
 public class ChessLayserCheck : MonoBehaviour
 {
     private int pointCount = 0;
-    private bool Check = false;
+    private bool check = false;
+    public bool Check => check;
 
     public void Point()
     {
         pointCount++;
         if (pointCount == 1)
         {
-            Check = true;
+            check = true;
             Debug.Log("활성화");
         }
     }
@@ -22,7 +23,7 @@ public class ChessLayserCheck : MonoBehaviour
         pointCount--;
         if (pointCount == 0)
         {
-            Check = false;
+            check = false;
             Debug.Log("비활성화");
         }
     }

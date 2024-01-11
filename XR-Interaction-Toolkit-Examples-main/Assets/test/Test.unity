@@ -607,6 +607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pawn (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1ae3b6cad3254b848942cea678f244c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ae3b6cad3254b848942cea678f244c7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -748,6 +752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pawn (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1ae3b6cad3254b848942cea678f244c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ae3b6cad3254b848942cea678f244c7, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -805,6 +813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PawnLight
       objectReference: {fileID: 0}
+    - target: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4010933918866702, guid: 391882f14be491c40962add653844907, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -861,6 +873,10 @@ PrefabInstance:
     - target: {fileID: 1971375302472462, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
       propertyPath: m_Name
       value: RookLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971375302472462, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4656301317612888, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
       propertyPath: m_RootOrder

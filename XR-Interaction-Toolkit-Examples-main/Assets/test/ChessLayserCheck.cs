@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class ChessLayserCheck : MonoBehaviour
 {
-    public int pointCount = 0;
+    private int pointCount = 0;
+    private bool Check = false;
 
     public void Point()
     {
         pointCount++;
         if (pointCount == 1)
         {
-
+            Check = true;
+            Debug.Log("활성화");
         }
     }
 
@@ -20,7 +22,8 @@ public class ChessLayserCheck : MonoBehaviour
         pointCount--;
         if (pointCount == 0)
         {
-
+            Check = false;
+            Debug.Log("비활성화");
         }
     }
 }

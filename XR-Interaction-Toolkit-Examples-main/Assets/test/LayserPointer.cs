@@ -44,14 +44,18 @@ public class LayserPointer : MonoBehaviour
 
             if (Collided_object.collider.gameObject.layer == LayerMask.NameToLayer("LayserTarget"))
             {
-                Debug.Log(1);
+                if (currentObject!= Collided_object.collider.gameObject)
+                {
+                    currentObject = Collided_object.collider.gameObject;
+                    layserCheck = currentObject.GetComponent<ChessLayserCheck>();
+                    layserCheck.Point();
+                }
             }
 
             if (Collided_object.collider.gameObject.CompareTag("Test"))
             {
                 {
                     //Collided_object.collider.gameObject.GetComponent<Button>().OnPointerEnter(null);
-                    currentObject = Collided_object.collider.gameObject;
                 }
             }
         }
@@ -61,30 +65,15 @@ public class LayserPointer : MonoBehaviour
             // 레이저에 감지된 것이 없기 때문에 레이저 초기 설정 길이만큼 길게 만든다.
             layser.SetPosition(1, transform.position + (transform.forward * raycastDistance));
 
-            // 최근 감지된 오브젝트가 Button인 경우
-            // 버튼은 현재 눌려있는 상태이므로 이것을 풀어준다.
             if (currentObject != null)
             {
                 //currentObject.GetComponent<Button>()?.OnPointerExit(null);
+                layserCheck.UnPoint();
+                layserCheck = null;
                 currentObject = null;
             }
 
         }
 
-    }
-
-    private void LateUpdate()
-    {
-        // 버튼을 누를 경우        
-        if (Input.GetMouseButtonDown(0))
-        {
-            //layser.material.color = new Color(255, 255, 255, 0.5f);
-        }
-
-        // 버튼을 뗄 경우          
-        else if (Input.GetMouseButtonUp(0))
-        {
-            //layser.material.color = new Color(0, 195, 255, 0.5f);
-        }
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33667145997053058}
   - component: {fileID: 23923637149797032}
   - component: {fileID: 6914279812740354105}
+  - component: {fileID: 615780043191166821}
   m_Layer: 6
   m_Name: RookLight
   m_TagString: Untagged
@@ -101,6 +102,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.895717, y: 1.3155541, z: 0.7757138}
   m_Center: {x: 0, y: 0.6577771, z: 0}
+--- !u!114 &615780043191166821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971375302472462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5975d2e0da5d3f6468af67e8358e97cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2472944227151888767
 GameObject:
   m_ObjectHideFlags: 0

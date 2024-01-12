@@ -21,7 +21,7 @@ public class LayserPointer : MonoBehaviour
         layser = this.gameObject.AddComponent<LineRenderer>();
 
         // 라인이 가지개될 색상 표현
-        layser.material = GameManager.Material_lay;
+        layser.material = IsStarter? GameManager.Material_lay_start : GameManager.Material_lay;
         // 레이저의 꼭지점은 2개가 필요 더 많이 넣으면 곡선도 표현 할 수 있다.
         layser.positionCount = 2;
         // 레이저 굵기 표현

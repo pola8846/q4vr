@@ -12,6 +12,8 @@ public class ChessLayserCheck : MonoBehaviour
     private GameObject[] lays;
     public GameObject[] Lays => lays;
 
+    public ParticleSystem particle;
+
     [SerializeField]
     private Dictionary<LayserPointer, int> level;
     public int Level
@@ -40,6 +42,28 @@ public class ChessLayserCheck : MonoBehaviour
         }
         SetLays(false);
         level = new();
+        particle = GetComponentInChildren<ParticleSystem>();
+    }
+
+    private void Update()
+    {
+        if (gameObject.CompareTag("DarkChess") && particle != null)
+        {
+            if (check)
+            {
+                if (particle.isStopped)
+                {
+                    particle.Play();
+                }
+            }
+            else
+            {
+                if (particle.isPlaying)
+                {
+                    particle.Stop();
+                }
+            }
+        }
     }
 
     public void Point(LayserPointer layser, int level)

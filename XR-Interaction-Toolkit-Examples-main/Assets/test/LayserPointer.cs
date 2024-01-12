@@ -1,16 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LayserPointer : MonoBehaviour
 {
     private LineRenderer layser;        // 레이저
     private RaycastHit Collided_object; // 충돌된 객체
     private GameObject currentObject;   // 가장 최근에 충돌한 객체를 저장하기 위한 객체
-    private ChessLayserCheck layserCheck;
+    private ChessLayserCheck layserCheck;// 가장 최근에 충돌한 객체를 저장하기 위한 객체
+    private ChessLayserCheck myLayserCheck;//내꺼
+    public bool IsStarter = false; //최초 레이저인가?
 
-    public float raycastDistance = 100f; // 레이저 포인터 감지 거리
+    public GameObject parent;
+
+    [SerializeField]
+    private float raycastDistance = 8f; // 레이저 포인터 감지 거리
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class LayserPointer : MonoBehaviour
         // 레이저 굵기 표현
         layser.startWidth = 0.3f;
         layser.endWidth = 0.01f;
+        myLayserCheck = GetComponentInParent<ChessLayserCheck>();
     }
 
     // Update is called once per frame
@@ -41,21 +44,32 @@ public class LayserPointer : MonoBehaviour
         {
             layser.SetPosition(1, Collided_object.point);
 
-            if (Collided_object.collider.gameObject.layer == LayerMask.NameToLayer("LayserTarget"))
+            if (Collided_object.collider.gameObject.layer == LayerMask.NameToLayer("LayserTarget") &&//레이어가 타겟이면
+                currentObject != Collided_object.collider.gameObject)
             {
-                if (currentObject!= Collided_object.collider.gameObject)
+                if (parent != null)
                 {
-                    currentObject = Collided_object.collider.gameObject;
+                    if (Collided_object.collider.gameObject != parent)//자기가 아니라면
+                    {
+                        layserCheck?.UnPoint(this);
+
+                        currentObject = Collided_object.collider.gameObject;//기억한다
+                        layserCheck = currentObject.GetComponent<ChessLayserCheck>();
+                        layserCheck?.Point(this, IsStarter ? 0 : myLayserCheck.Level);
+                    }
+                }
+                else
+                {
+                    currentObject = Collided_object.collider.gameObject;//기억한다
+                    layserCheck?.UnPoint(this);
                     layserCheck = currentObject.GetComponent<ChessLayserCheck>();
-                    layserCheck?.Point();
+                    layserCheck?.Point(this, IsStarter ? 0 : myLayserCheck.Level);
                 }
             }
 
-            if (Collided_object.collider.gameObject.CompareTag("Test"))
+            if (Collided_object.collider.gameObject.layer == LayerMask.NameToLayer("LayserBlocker"))//벽이라면
             {
-                {
-                    //Collided_object.collider.gameObject.GetComponent<Button>().OnPointerEnter(null);
-                }
+                Unpoint();
             }
         }
 
@@ -66,13 +80,17 @@ public class LayserPointer : MonoBehaviour
 
             if (currentObject != null)
             {
-                //currentObject.GetComponent<Button>()?.OnPointerExit(null);
-                layserCheck?.UnPoint();
-                layserCheck = null;
-                currentObject = null;
+                Unpoint();
             }
 
         }
 
+    }
+
+    public void Unpoint()
+    {
+        layserCheck?.UnPoint(this);
+        layserCheck = null;
+        currentObject = null;
     }
 }

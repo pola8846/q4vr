@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7217348849232762755}
   - component: {fileID: 4385012050968454609}
   - component: {fileID: 6100864976428515550}
+  - component: {fileID: 6289527513211636621}
   m_Layer: 6
   m_Name: PawnLight
   m_TagString: Untagged
@@ -100,8 +101,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.75590956, y: 1.2133604, z: 0.654637}
-  m_Center: {x: 0, y: 0.6066802, z: 0}
+  m_Size: {x: 0.75590956, y: 1, z: 0.654637}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &1118745688499311502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5975d2e0da5d3f6468af67e8358e97cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
+  lays:
+  - {fileID: 1799925627036508556}
 --- !u!54 &7217348849232762755
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -313,6 +317,20 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_Variable: {fileID: 0}
+--- !u!136 &6289527513211636621
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006356879557798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.37795478
+  m_Height: 1.2133604
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.6066802, z: 0}
 --- !u!1 &1799925627036508556
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,4 +375,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916fba6f9e9afa547ae5c9454c6d94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStarter: 0
   raycastDistance: 100

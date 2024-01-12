@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8093292235215333875}
   - component: {fileID: 6422766231408935884}
   - component: {fileID: 3093804121645257091}
+  - component: {fileID: 5085358117628331143}
   m_Layer: 6
   m_Name: BishopLight
   m_TagString: Untagged
@@ -105,8 +106,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8763499, y: 1.5062299, z: 0.7589414}
-  m_Center: {x: 0, y: 0.75311494, z: 0}
+  m_Size: {x: 0.8763499, y: 1, z: 0.7589414}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &6057926285167703652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +120,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5975d2e0da5d3f6468af67e8358e97cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
+  lays:
+  - {fileID: 6521195277579842471}
+  - {fileID: 3518754744365619935}
+  - {fileID: 6450549207408447315}
+  - {fileID: 578882855266546773}
+  - {fileID: 5577598768518444327}
+  - {fileID: 1423236633505819856}
 --- !u!54 &8093292235215333875
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -318,6 +327,20 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_Variable: {fileID: 0}
+--- !u!136 &5085358117628331143
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028868664329696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.43817496
+  m_Height: 1.5062299
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.75311494, z: 0}
 --- !u!1 &578882855266546773
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,8 +385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916fba6f9e9afa547ae5c9454c6d94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStarter: 0
   raycastDistance: 100
-  material1: {fileID: 3627763037591626431, guid: 5daa2e3c4c8d7b948841d963f321a6bf, type: 3}
 --- !u!1 &1423236633505819856
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,8 +431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916fba6f9e9afa547ae5c9454c6d94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStarter: 0
   raycastDistance: 100
-  material1: {fileID: 3627763037591626431, guid: 5daa2e3c4c8d7b948841d963f321a6bf, type: 3}
 --- !u!1 &3518754744365619935
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,8 +477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916fba6f9e9afa547ae5c9454c6d94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStarter: 0
   raycastDistance: 100
-  material1: {fileID: 3627763037591626431, guid: 5daa2e3c4c8d7b948841d963f321a6bf, type: 3}
 --- !u!1 &5577598768518444327
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,8 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916fba6f9e9afa547ae5c9454c6d94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStarter: 0
   raycastDistance: 100
-  material1: {fileID: 3627763037591626431, guid: 5daa2e3c4c8d7b948841d963f321a6bf, type: 3}
 --- !u!1 &6450549207408447315
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,8 +569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916fba6f9e9afa547ae5c9454c6d94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStarter: 0
   raycastDistance: 100
-  material1: {fileID: 3627763037591626431, guid: 5daa2e3c4c8d7b948841d963f321a6bf, type: 3}
 --- !u!1 &6521195277579842471
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,5 +615,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916fba6f9e9afa547ae5c9454c6d94be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStarter: 0
   raycastDistance: 100
-  material1: {fileID: 3627763037591626431, guid: 5daa2e3c4c8d7b948841d963f321a6bf, type: 3}

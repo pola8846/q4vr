@@ -9,6 +9,8 @@ TagManager:
   - Destroyer
   - MiniWorldCamera
   - Water
+  - Test
+  - DarkChess
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - LayserTarget
+  - LayserBlocker
   - 
   - 
   - 

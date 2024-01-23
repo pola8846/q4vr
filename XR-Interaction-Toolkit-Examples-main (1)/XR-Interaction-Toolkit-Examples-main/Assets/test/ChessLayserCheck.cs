@@ -90,7 +90,7 @@ public class ChessLayserCheck : MonoBehaviour
         if (this.level.Count == 1)//활성화 체크
         {
             check = true;
-            Debug.Log("활성화");
+            //Debug.Log("활성화");
             SetLays(true);
         }
     }
@@ -105,13 +105,13 @@ public class ChessLayserCheck : MonoBehaviour
         if (level.Count == 1)
         {
             check = false;
-            Debug.Log("비활성화");
+            //Debug.Log("비활성화");
             if (safeSwitch==false)
             {
                 safeSwitch = true;
                 foreach (var lay in lays)
                 {
-                    lay.GetComponent<LayserPointer>().Unpoint();
+                    lay.GetComponent<LayserPointer>()?.Unpoint();
                 }
                 safeSwitch = false;
             }
@@ -125,7 +125,7 @@ public class ChessLayserCheck : MonoBehaviour
     {
         foreach (var lay in lays)
         {
-            lay.SetActive(triger);
+            lay?.SetActive(triger);
         }
     }
 

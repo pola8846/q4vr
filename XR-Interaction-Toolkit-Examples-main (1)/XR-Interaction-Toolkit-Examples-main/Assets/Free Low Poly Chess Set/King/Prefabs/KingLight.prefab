@@ -113,6 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5975d2e0da5d3f6468af67e8358e97cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
+  lays: []
+  particle: {fileID: 0}
 --- !u!54 &-8422728400138657413
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,7 +150,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4294967295
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}

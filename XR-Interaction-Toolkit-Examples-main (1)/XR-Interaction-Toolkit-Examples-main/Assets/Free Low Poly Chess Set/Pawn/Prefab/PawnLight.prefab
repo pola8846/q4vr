@@ -118,6 +118,7 @@ MonoBehaviour:
   check: 0
   lays:
   - {fileID: 1799925627036508556}
+  particle: {fileID: 0}
 --- !u!54 &7217348849232762755
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4294967295
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
@@ -376,4 +377,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsStarter: 0
+  parent: {fileID: 0}
   raycastDistance: 100

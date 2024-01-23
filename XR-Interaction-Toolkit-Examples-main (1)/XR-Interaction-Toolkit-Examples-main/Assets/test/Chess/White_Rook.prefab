@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 4833345429137076177}
   - component: {fileID: 5792048907070048621}
   - component: {fileID: -5154879418267541789}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: White_Rook
   m_TagString: Untagged
   m_Icon: {fileID: 0}

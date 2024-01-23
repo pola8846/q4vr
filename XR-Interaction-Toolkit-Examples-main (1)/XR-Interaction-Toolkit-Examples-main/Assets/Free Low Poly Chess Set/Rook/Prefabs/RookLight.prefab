@@ -123,6 +123,7 @@ MonoBehaviour:
   - {fileID: 4983183083769231464}
   - {fileID: 2472944227151888767}
   - {fileID: 4543904360266807463}
+  particle: {fileID: 0}
 --- !u!54 &831237392028540392
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,7 +158,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4294967295
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
@@ -367,6 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsStarter: 0
+  parent: {fileID: 0}
   raycastDistance: 100
 --- !u!1 &4543904360266807463
 GameObject:
@@ -413,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsStarter: 0
+  parent: {fileID: 0}
   raycastDistance: 100
 --- !u!1 &4983183083769231464
 GameObject:
@@ -459,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsStarter: 0
+  parent: {fileID: 0}
   raycastDistance: 100
 --- !u!1 &7274894181320304312
 GameObject:
@@ -505,4 +509,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsStarter: 0
+  parent: {fileID: 0}
   raycastDistance: 100

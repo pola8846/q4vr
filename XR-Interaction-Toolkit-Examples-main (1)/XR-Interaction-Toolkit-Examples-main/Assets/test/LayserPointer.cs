@@ -12,7 +12,7 @@ public class LayserPointer : MonoBehaviour
     public GameObject parent;
 
     [SerializeField]
-    private float raycastDistance = 8f; // 레이저 포인터 감지 거리
+    private float raycastDistance = .8f; // 레이저 포인터 감지 거리
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +25,8 @@ public class LayserPointer : MonoBehaviour
         // 레이저의 꼭지점은 2개가 필요 더 많이 넣으면 곡선도 표현 할 수 있다.
         layser.positionCount = 2;
         // 레이저 굵기 표현
-        layser.startWidth = 0.3f;
-        layser.endWidth = 0.01f;
+        layser.startWidth = 0.03f;
+        layser.endWidth = 0.001f;
         myLayserCheck = GetComponentInParent<ChessLayserCheck>();
     }
 

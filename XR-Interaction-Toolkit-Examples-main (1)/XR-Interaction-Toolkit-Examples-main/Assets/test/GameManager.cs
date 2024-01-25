@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
     public static Material Material_lay_start => instance.material_lay_start;
 
     [SerializeField]
-    private Vector3 stageOrigin = Vector3.zero;
-    public static Vector3 StageOrigin => instance.stageOrigin;
+    private GameObject stageOrigin;
+    public static Vector3 StageOrigin => instance.stageOrigin.transform.position;
 
     private void Awake()
     {

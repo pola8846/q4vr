@@ -18,6 +18,7 @@ public class StageLogic : MonoBehaviour
         if (IsActivate && !IsClear && GameManager.StageClearCheck())
         {
             IsClear = true;
+            gameObject.GetComponent<AudioSource>().Play();
             particle.Play();
         }
     }
